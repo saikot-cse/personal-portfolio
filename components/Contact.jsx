@@ -4,7 +4,8 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
-
+import emailjs from "@emailjs/browser"
+import Swal from 'sweetalert2'
 export const Contact = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -12,13 +13,28 @@ export const Contact = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     setName('');
     setPhone('');
     setEmail('');
     setSubject('');
     setMessage('');
+    e.preventDefault();
+
+    emailjs.sendForm('service_10qdgud', 'SaifullahMansur', e.target, '0_YT4HBdwq3g9VkdA')
+        .then((result) => {
+          Swal.fire(
+            'Your Message has been successfully sent.',
+            'I will contact you Soon.',
+            'success'
+          )
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    e.target.reset();
   };
+  
 
   return (
     <div id='contact' className='w-full lg:h-screen'>
