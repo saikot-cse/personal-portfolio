@@ -19,17 +19,17 @@ export const Projects = () => {
           <ProjectItem
             title='Estro Gadget'
             backgroundImg={estroGadget}
-            projectUrl='/estroGadget'
+            // projectUrl='/estroGadget'
           />
           <ProjectItem
             title='Pro Tech Gear'
             backgroundImg={proTechGear}
-            projectUrl='/proTechGear'
+            // projectUrl='/proTechGear'
           />
           <ProjectItem
             title='Diligent Developer'
             backgroundImg={diligentDeveloper}
-            projectUrl='/diligentDeveloper'
+            // projectUrl='/diligentDeveloper'
           />
           
         </div>
