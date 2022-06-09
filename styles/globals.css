@@ -24,10 +24,11 @@ html {
   }
   
   li {
-    @apply cursor-pointer
+    @apply cursor-pointer bg-gradient-to-r from-[#067DE7] to-[#0EC8E5] shadow-lg px-4 py-2 shadow-gray-400 rounded-full uppercase text-white mb-2 text-center
   }
+  
 
   button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#3b3897] to-[#7da4f6] text-white
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#067DE7] to-[#0EC8E5] text-white
   }
 }
