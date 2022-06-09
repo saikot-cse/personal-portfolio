@@ -6,6 +6,8 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import emailjs from "@emailjs/browser"
 import Swal from 'sweetalert2'
+import Image from 'next/image';
+import contact from "../public/Assets/contact.jpg"
 export const Contact = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -48,10 +50,10 @@ export const Contact = () => {
           <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
             <div className='lg:p-4 h-full '>
               <div>
-                <img
+                <Image
                   className='rounded-xl hover:scale-105 ease-in duration-300'
-                  src='https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80'
-                  alt='/'
+                  src={contact}
+                  alt='/' height="" width=""
                 />
               </div>
               <div>
